@@ -1,12 +1,11 @@
-public class WeatherTower {
-
+public class WeatherTower extends Tower{
 
     public String getWeather(Coordinates coordinates) {
-
-        return "dsa";
+        WeatherProvider wp = WeatherProvider.getProvider();
+        return wp.getCurrentWeather(coordinates);
     }
 
-    private void changeWeather() {
+    protected void changeWeather() {
 
     }
 }
